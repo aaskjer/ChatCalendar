@@ -4,8 +4,8 @@
 
 ### Added
 - A Settings window: run the trigger 'Test' of the new action '[CC] - .Settings'. Its pages are
-  Chat (greetings on/off, `!nextholidays`, `!nextbirthdays`), Announcements (webhooks with a Test button,
-  time, look, a colour picker), Calendar (country, region, time zone, chat language, year, download),
+  Chat (greetings on/off, `!nextholidays`, `!nextbirthdays`), Announcements (webhooks, covered with an eye to
+  show them, and a Test button; time, look, a colour picker), Calendar (country, region, time zone, chat language, year, download),
   Holidays (greetings of the official holidays, your own holidays), Birthdays, Messages (your own texts
   with a chat preview, bot or broadcaster, /me), Log, Help and About. It saves `configs.json` next to `holidays.json`, which every action reads; a damaged
   file is kept as `configs.json.broken` and the window falls back to the last save. The header shows when a
@@ -63,5 +63,5 @@
   Message instead of First Words).
 - A time zone (e.g. `Europe/Berlin`) sets when a day begins; without it, the PC's clock does.
 - The command's answer on days without a holiday and `{pronounType}` follow the country, or the chat language
-  set in the Settings window.
+  set in the Settings window. Bavarian is the chat language 'Boarisch'; the country BY (Belarus) gets Russian.
 - Upcoming Holidays shows at most 25 holidays and pauses a second between chat messages.

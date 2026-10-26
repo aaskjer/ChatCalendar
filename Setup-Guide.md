@@ -51,6 +51,7 @@ follow; and `!nextbirthdays`, which lists the next birthdays alone: how many of 
 <p align="center"><img src="Assets/screenshots/announcements.png" alt="Announcements page" width="620"></p>
 
 Paste a webhook URL for each platform to post to; several on one platform are separated by commas.
+The URLs stay covered: the eye beside one shows it, and clicking elsewhere or leaving the page covers it again.
 `Test` saves and posts today's holidays right away (a test post on a day without one).
 
 - **Discord:** channel settings → `Integrations` → `Webhooks` → `New Webhook` → `Copy Webhook URL`.
@@ -75,6 +76,7 @@ downloads its holidays and the list follows.
 
 The **time zone** sets when a day begins — midnight for your viewers, not on the PC's clock. The **chat
 language** is the language of every text the actions write; by default it follows the country.
+`Boarisch` writes Bavarian; `Deutsch` or the default for Germany, Austria and Switzerland is standard German.
 
 `Save and download now` downloads every year again. Saving another country, region, time zone or year
 runs the download too.
