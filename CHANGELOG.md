@@ -1,15 +1,15 @@
 # Changelog
 
-## v1.0.0-Pre-Release.1 - 2026-10-26
+## v1.0.0 - 2026-10-27
 
 ### Added
-- A Settings window: run the trigger 'Test' of the new action '[CC] - .Settings'. Its pages are
-  Chat (greetings on/off, `!nextholidays`, `!nextbirthdays`), Announcements (webhooks, covered with an eye to
-  show them, and a Test button; time, look, a colour picker), Calendar (country, region, time zone, chat language, year, download),
-  Holidays (greetings of the official holidays, your own holidays), Birthdays, Messages (your own texts
-  with a chat preview, bot or broadcaster, /me), Log, Help and About. It saves `configs.json` next to `holidays.json`, which every action reads; a damaged
-  file is kept as `configs.json.broken` and the window falls back to the last save. The header shows when a
-  newer release is out on GitHub (aaskjer/ChatCalendar).
+- A Settings window: run the trigger 'Test' of the new action '[CC] - .Settings'. Its pages are Chat
+  (greetings on/off, `!nextholidays`, `!nextbirthdays`), Announcements (webhooks, covered with an eye to show
+  them, and a Test button; time, look, a colour picker), Calendar (country, region, time zone, chat language,
+  year, download), Holidays (greetings of the official holidays, your own holidays), Birthdays, Messages (your
+  own texts with a chat preview, bot or broadcaster, /me), Log, Help and About. It saves `configs.json` next to
+  `holidays.json`, which every action reads; a damaged file is kept as `configs.json.broken` and the window
+  falls back to the last save. A red pill in its header shows when a newer release is out on GitHub.
 - YouTube and Kick: chatters there are greeted on holidays, and both commands answer in the chat they came
   from (split for YouTube's 200 characters). Untick a trigger or a command source to leave a platform out.
 - New action 'Announce Holidays': posts today's holidays to Discord, Stoat and GameVox webhooks once a day at
