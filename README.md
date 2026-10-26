@@ -57,7 +57,8 @@ their birthday. In German, French, Spanish and a dozen more languages, following
 - **Discord, Stoat and GameVox.** Today's holidays and birthdays as one post a day, at the time you
   set, through a webhook. No Streamer.bot timer needed.
 - **One settings window for all of it.** Country, region, time zone, every greeting with a chat preview,
-  own holidays, birthdays, webhooks with a test button, and the log of what was said.
+  own holidays, birthdays, webhooks with a test button and a colour picker, and the log of what was said.
+  It downloads the holidays itself: there is nothing to run by hand.
 
 ---
 
@@ -69,6 +70,7 @@ They ship switched off: enable them under `Commands` in Streamer.bot.
 |---|---|
 | `!holiday` · `!feiertag` · `!ferien` … | Today's holidays, or that there is none today. On one's birthday, the birthday greeting. |
 | `!nextholidays` · `!feiertage` … | The next holidays; your own ones and the next birthdays too, if you switch them on. |
+| `!nextbirthdays` · `!birthdays` · `!geburtstage` | The next birthdays alone, as many as you set (5 by default). |
 | `!birthday 24.12.` · `!geburtstag` · `!bday` | Saves your birthday. `!birthday` alone shows it, `!birthday remove` deletes it. |
 | `!birthday @name 24.12.` | Moderators and the broadcaster: the same for someone else (`@name`, `@name remove`). |
 

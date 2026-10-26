@@ -4,10 +4,10 @@
 
 ### Added
 - A Settings window: run the trigger 'Test' of the new action 'ChatCalendar - Settings'. Its pages are
-  Calendar (country, region, time zone, chat language, year, download), Holidays (greetings of the official
-  holidays, your own holidays), Birthdays, Chat (greetings on/off, bot or broadcaster, /me, `!nextholidays`),
-  Messages (your own texts with a chat preview), Announcements (webhooks with a Test button, time, look),
-  Log, Help and About. It saves `configs.json` next to `holidays.json`, which every action reads; a damaged
+  Chat (greetings on/off, `!nextholidays`, `!nextbirthdays`), Announcements (webhooks with a Test button,
+  time, look, a colour picker), Calendar (country, region, time zone, chat language, year, download),
+  Holidays (greetings of the official holidays, your own holidays), Birthdays, Messages (your own texts
+  with a chat preview, bot or broadcaster, /me), Log, Help and About. It saves `configs.json` next to `holidays.json`, which every action reads; a damaged
   file is kept as `configs.json.broken` and the window falls back to the last save. The header shows when a
   newer release is out on GitHub (aaskjer/ChatCalendar).
 - YouTube and Kick: chatters there are greeted on holidays, and both commands answer in the chat they came
@@ -30,10 +30,11 @@
   left out of the greeting, Upcoming Holidays and the announcements. A code no holiday uses is named in the
   log, together with the ones that exist. Own holidays always count.
 - Greetings on holidays and on birthdays can be switched off separately; the command still answers.
+- `!nextbirthdays` (`!birthdays`, `!geburtstage`): the next birthdays alone, 5 by default, at most 25.
 - A log of what was said and posted: `Logs\ChatCalendar-YYYY-MM-DD.txt`, kept 30 days, shown on the Log page.
 
 ### Fixed
-- Holidays download again: date.nager.at dropped its CSV export, the Setup action now uses its JSON API.
+- Holidays download again: date.nager.at dropped its CSV export, 'Calendar Setup' now uses its JSON API.
 - `{holidayName}` was empty, and two holidays on the same day were announced as one.
 - The command answered nothing on days without a holiday.
 - Upcoming Holidays failed for country codes without a translation (AT, CH, GB, PL ...); they get German or
@@ -51,9 +52,12 @@
 - Everything lives in the folder `Chat Calendar` in the Streamer.bot folder. Holidays of older versions
   (`C:\streamer.bot\Twitch Calendar`, or `Twitch Calendar` in the Streamer.bot folder) are copied over on the
   first run.
-- The Setup action keeps your own greetings and own holidays, also into the next year, and keeps the previous
+- '.. Setup Action ..' is now 'Calendar Setup' and has no trigger: nothing has to be run there. The Settings
+  window runs it when it opens without holidays (or without this year's), and when another country, region,
+  time zone or year is saved.
+- 'Calendar Setup' keeps your own greetings and own holidays, also into the next year, and keeps the previous
   file as `holidays.json.bak`. 'Save and download now' in the Settings window downloads every year again.
-- When a new year begins (or from November on, for the next one), the other actions run the Setup action
+- When a new year begins (or from November on, for the next one), the other actions run 'Calendar Setup'
   themselves; saving another country, region, time zone or year in the Settings window runs it too.
 - Every chatter is greeted once per holiday, also when the stream runs past midnight (trigger: Twitch Chat
   Message instead of First Words).

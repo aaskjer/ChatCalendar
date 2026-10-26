@@ -9,15 +9,15 @@ You get six actions in the group `ChatCalendar`:
 | Action | What it is for |
 |---|---|
 | `ChatCalendar - Settings` | Opens the Settings window. |
-| `.. Setup Action ..` | Downloads the holidays. Runs by itself when a new year begins, when you save another country or region, and from the window. |
+| `Calendar Setup` | Downloads the holidays. Nothing to run here: it starts by itself when the Settings window opens without holidays, when you save another country or region, when a new year begins, and from `Save and download now`. |
 | `Check today's holiday & firstMessage` | Greets the chat; answers `!holiday`. |
-| `Upcoming Holidays` | Answers `!nextholidays`. |
+| `Upcoming Holidays` | Answers `!nextholidays` and `!nextbirthdays`. |
 | `Birthday Command` | Answers `!birthday`. |
 | `Announce Holidays` | Posts to Discord, Stoat and GameVox once a day. |
 
 ## Enable Commands
 
-The commands ship disabled. Go to `Commands`, enable the three `ChatCalendar - ...` commands and tick
+The commands ship disabled. Go to `Commands`, enable the four `ChatCalendar - ...` commands and tick
 the platforms they should answer on (Twitch, YouTube, Kick) under their sources.
 
 Which chats are greeted is up to the triggers of `Check today's holiday & firstMessage`: Twitch, YouTube
@@ -28,7 +28,11 @@ and Kick chat messages. Untick one to leave that platform out.
 Go to `Actions`, select `ChatCalendar - Settings`, right-click the `Test` trigger and choose
 `Test Trigger`. That opens the Settings window.
 
-Seven pages sit on the rail down the left side, Help and About at its foot. `Ctrl+1` to `Ctrl+9` jump
+The first time it opens, the window downloads the holidays of your country by itself; the Calendar page
+shows how far it is. Nothing has to be run in `Calendar Setup`.
+
+Seven pages sit on the rail down the left side — Chat, Announcements, Calendar, Holidays, Birthdays,
+Messages, Log —, Help and About at its foot. `Ctrl+1` to `Ctrl+9` jump
 between them, `Ctrl+S` saves. The sun or moon at the bottom left switches between the dark and light
 theme; the arrow next to it puts the page you are on back to its defaults. Nothing is written until you
 press `Save`.
@@ -36,14 +40,38 @@ press `Save`.
 Everything lands in the folder `Chat Calendar` next to Streamer.bot: `configs.json` (this window),
 `holidays.json`, `birthdays.json` and the `Logs` folder.
 
+## Chat
+<p align="center"><img src="Assets/screenshots/chat.png" alt="Chat page" width="620"></p>
+
+Whether chatters are greeted on holidays and on their birthday — the command answers either way. Below,
+`!nextholidays`: how many holidays it lists, and whether your own holidays and the next birthdays
+follow; and `!nextbirthdays`, which lists the next birthdays alone: how many of them.
+
+## Announcements
+<p align="center"><img src="Assets/screenshots/announcements.png" alt="Announcements page" width="620"></p>
+
+Paste a webhook URL for each platform to post to; several on one platform are separated by commas.
+`Test` saves and posts today's holidays right away (a test post on a day without one).
+
+- **Discord:** channel settings → `Integrations` → `Webhooks` → `New Webhook` → `Copy Webhook URL`.
+- **Stoat:** channel settings → `Webhooks`; the URL looks like `https://api.stoat.chat/webhooks/<id>/<token>`.
+- **GameVox:** Developer Portal → your application → `Webhooks` → the execute URL (cloud-hosted servers only).
+
+The post goes out once a day at the time you set, in the time zone of the Calendar page. Title, the line
+per holiday and per birthday, the colour and a Discord text above the post (a role mention, say) are
+yours to change. Click the colour swatch for a picker: click or drag in the field and the hue bar, or
+use the red, green and blue sliders and the colours below them.
+
+<p align="center"><img src="Assets/screenshots/announcements-colour.png" alt="Colour picker" width="300"></p>
+
 ## Calendar
 <p align="center"><img src="Assets/screenshots/calendar.png" alt="Calendar page" width="620"></p>
 
 Your **country**, and the **region** whose holidays count: some are only holidays in parts of a country
 (Epiphany in Baden-Württemberg, Bavaria and Saxony-Anhalt). `All regions` greets everyone for each of
 them, a region keeps the nationwide ones and its own, `Nationwide holidays only` keeps those alone.
-The regions listed are the ones the downloaded holidays name; after changing the country, press
-`Save and download now` to see the new country's.
+The regions listed are the ones the downloaded holidays name; after changing the country, `Save`
+downloads its holidays and the list follows.
 
 The **time zone** sets when a day begins — midnight for your viewers, not on the PC's clock. The **chat
 language** is the language of every text the actions write; by default it follows the country.
@@ -72,14 +100,6 @@ A date with a year (`1994-12-02`) knows the age for `{age}`; the command never k
 `Platform` matters only when the same name exists on another platform. A greeting here replaces the
 one on the Messages page for that person.
 
-## Chat
-<p align="center"><img src="Assets/screenshots/chat.png" alt="Chat page" width="620"></p>
-
-Whether chatters are greeted on holidays and on their birthday — the command answers either way —,
-whether messages come from your bot account or the broadcaster's, and `/me` on Twitch. Below,
-`!nextholidays`: how many holidays it lists, and whether your own holidays and the next birthdays
-follow.
-
 ## Messages
 <p align="center"><img src="Assets/screenshots/messages.png" alt="Messages page" width="620"></p>
 
@@ -87,19 +107,8 @@ Your own texts for the holiday greeting, the birthday greeting and the answer on
 holiday. Empty means the built-in text in the chat language. Click a placeholder to insert it; the
 preview shows the message as the chat will see it.
 
-## Announcements
-<p align="center"><img src="Assets/screenshots/announcements.png" alt="Announcements page" width="620"></p>
-
-Paste a webhook URL for each platform to post to; several on one platform are separated by commas.
-`Test` saves and posts today's holidays right away (a test post on a day without one).
-
-- **Discord:** channel settings → `Integrations` → `Webhooks` → `New Webhook` → `Copy Webhook URL`.
-- **Stoat:** channel settings → `Webhooks`; the URL looks like `https://api.stoat.chat/webhooks/<id>/<token>`.
-- **GameVox:** Developer Portal → your application → `Webhooks` → the execute URL (cloud-hosted servers only).
-
-The post goes out once a day at the time you set, in the time zone of the Calendar page. Title, the line
-per holiday and per birthday, the colour and a Discord text above the post (a role mention, say) are
-yours to change.
+Under the preview: whether every message comes from your bot account or the broadcaster's, and `/me`
+on Twitch (YouTube and Kick have none and get a plain message).
 
 ## Log
 <p align="center"><img src="Assets/screenshots/log.png" alt="Log page" width="620"></p>
