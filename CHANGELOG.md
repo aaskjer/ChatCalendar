@@ -3,7 +3,7 @@
 ## v1.0.0-Pre-Release.1 - 2026-10-26
 
 ### Added
-- A Settings window: run the trigger 'Test' of the new action 'ChatCalendar - Settings'. Its pages are
+- A Settings window: run the trigger 'Test' of the new action '[CC] - .Settings'. Its pages are
   Chat (greetings on/off, `!nextholidays`, `!nextbirthdays`), Announcements (webhooks with a Test button,
   time, look, a colour picker), Calendar (country, region, time zone, chat language, year, download),
   Holidays (greetings of the official holidays, your own holidays), Birthdays, Messages (your own texts
@@ -34,7 +34,7 @@
 - A log of what was said and posted: `Logs\ChatCalendar-YYYY-MM-DD.txt`, kept 30 days, shown on the Log page.
 
 ### Fixed
-- Holidays download again: date.nager.at dropped its CSV export, 'Calendar Setup' now uses its JSON API.
+- Holidays download again: date.nager.at dropped its CSV export, '[CC] - Calendar Setup' now uses its JSON API.
 - `{holidayName}` was empty, and two holidays on the same day were announced as one.
 - The command answered nothing on days without a holiday.
 - Upcoming Holidays failed for country codes without a translation (AT, CH, GB, PL ...); they get German or
@@ -52,12 +52,12 @@
 - Everything lives in the folder `Chat Calendar` in the Streamer.bot folder. Holidays of older versions
   (`C:\streamer.bot\Twitch Calendar`, or `Twitch Calendar` in the Streamer.bot folder) are copied over on the
   first run.
-- '.. Setup Action ..' is now 'Calendar Setup' and has no trigger: nothing has to be run there. The Settings
+- '.. Setup Action ..' is now '[CC] - Calendar Setup' and has no trigger: nothing has to be run there. The Settings
   window runs it when it opens without holidays (or without this year's), and when another country, region,
   time zone or year is saved.
-- 'Calendar Setup' keeps your own greetings and own holidays, also into the next year, and keeps the previous
+- '[CC] - Calendar Setup' keeps your own greetings and own holidays, also into the next year, and keeps the previous
   file as `holidays.json.bak`. 'Save and download now' in the Settings window downloads every year again.
-- When a new year begins (or from November on, for the next one), the other actions run 'Calendar Setup'
+- When a new year begins (or from November on, for the next one), the other actions run '[CC] - Calendar Setup'
   themselves; saving another country, region, time zone or year in the Settings window runs it too.
 - Every chatter is greeted once per holiday, also when the stream runs past midnight (trigger: Twitch Chat
   Message instead of First Words).

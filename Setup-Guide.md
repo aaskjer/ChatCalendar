@@ -8,8 +8,8 @@ You get six actions in the group `ChatCalendar`:
 
 | Action | What it is for |
 |---|---|
-| `ChatCalendar - Settings` | Opens the Settings window. |
-| `Calendar Setup` | Downloads the holidays. Nothing to run here: it starts by itself when the Settings window opens without holidays, when you save another country or region, when a new year begins, and from `Save and download now`. |
+| `[CC] - .Settings` | Opens the Settings window. |
+| `[CC] - Calendar Setup` | Downloads the holidays. Nothing to run here: it starts by itself when the Settings window opens without holidays, when you save another country or region, when a new year begins, and from `Save and download now`. |
 | `Check today's holiday & firstMessage` | Greets the chat; answers `!holiday`. |
 | `Upcoming Holidays` | Answers `!nextholidays` and `!nextbirthdays`. |
 | `Birthday Command` | Answers `!birthday`. |
@@ -25,11 +25,11 @@ and Kick chat messages. Untick one to leave that platform out.
 
 # Setup
 
-Go to `Actions`, select `ChatCalendar - Settings`, right-click the `Test` trigger and choose
+Go to `Actions`, select `[CC] - .Settings`, right-click the `Test` trigger and choose
 `Test Trigger`. That opens the Settings window.
 
 The first time it opens, the window downloads the holidays of your country by itself; the Calendar page
-shows how far it is. Nothing has to be run in `Calendar Setup`.
+shows how far it is. Nothing has to be run in `[CC] - Calendar Setup`.
 
 Seven pages sit on the rail down the left side — Chat, Announcements, Calendar, Holidays, Birthdays,
 Messages, Log —, Help and About at its foot. `Ctrl+1` to `Ctrl+9` jump
