@@ -1,5 +1,29 @@
 # Changelog
 
+## v1.0.1 - 2026-10-29
+
+### Added
+- Greetings may be left empty. Not every holiday has one — nobody wishes a happy "Tag der Arbeit". An empty
+  `Greeting` on the Holidays page (and an empty `DefaultMessage` in `holidays.json`) greets nobody on that
+  day; `!holiday` answers with the name of the day instead, and the announcement still lists it. Setup keeps
+  an empty greeting when the next year's holidays arrive, as it keeps the written ones.
+
+### Fixed
+- Mariä Himmelfahrt (15 August) now counts in Bavaria, not in Saarland alone. date.nager.at lists it for
+  Saarland only; it is a holiday in the Bavarian municipalities with a Catholic majority, nearly all of
+  Lower and Upper Bavaria among them. Setup adds the region after every download, and to holidays already
+  written, cross-checked against openholidaysapi.org.
+- The region list covers every country whose holidays differ by region: all 50 US states, the Canadian
+  provinces, the Australian states, the Spanish communities, the Italian regions and the rest — 259 regions
+  in the 17 countries of the 204 that have any. Every region is listed, not only those a downloaded holiday
+  happens to name, and the list follows the country as soon as it is changed.
+- Picking a region without a holiday of its own (Florida, Lower Saxony) is no longer logged as a warning;
+  only a region of another country is.
+- The Holidays page listed every holiday of the country, Bavaria's Reformation Day included. It now shows
+  the holidays of the chosen region alone, the way the greeting, Upcoming Holidays and the announcements
+  have always counted them, and follows the region on the Calendar page before it is saved. The note under
+  the list says how many of the country's holidays count where you are.
+
 ## v1.0.0 - 2026-10-27
 
 ### Added

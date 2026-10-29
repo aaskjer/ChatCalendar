@@ -71,8 +71,10 @@ use the red, green and blue sliders and the colours below them.
 Your **country**, and the **region** whose holidays count: some are only holidays in parts of a country
 (Epiphany in Baden-Württemberg, Bavaria and Saxony-Anhalt). `All regions` greets everyone for each of
 them, a region keeps the nationwide ones and its own, `Nationwide holidays only` keeps those alone.
-The regions listed are the ones the downloaded holidays name; after changing the country, `Save`
-downloads its holidays and the list follows.
+Of the 204 countries, 17 have holidays that differ by region; each of those is listed with every one of
+its regions — all 50 US states, every Canadian province, every Bundesland — and the rest with none.
+After changing the country, `Save` downloads its holidays and the list follows. The Holidays page then
+shows the holidays of that region alone — Bavaria has no Reformation Day.
 
 The **time zone** sets when a day begins — midnight for your viewers, not on the PC's clock. The **chat
 language** is the language of every text the actions write; by default it follows the country.
@@ -84,13 +86,17 @@ runs the download too.
 ## Holidays
 <p align="center"><img src="Assets/screenshots/holidays.png" alt="Holidays page" width="620"></p>
 
-**Official holidays** come from date.nager.at. The `Greeting` column is what a chatter hears on that
-day; it is kept when next year's holidays arrive.
+**Official holidays** come from date.nager.at, and only those that count in your region are listed.
+Where that source leaves a region out, Setup adds it: Mariä Himmelfahrt counts in Bavaria, not in
+Saarland alone — it is a holiday in the Bavarian municipalities with a Catholic majority, most of them.
+The `Greeting` column is what a chatter hears on that day; it is kept when next year's holidays arrive.
+Leave it empty for a day no one has a greeting for — nobody wishes a happy Labour Day: then nobody is
+greeted for it, while `!holiday` still names the day and the announcement still lists it.
 
 <p align="center"><img src="Assets/screenshots/holidays-own-holidays.png" alt="Own holidays" width="620"></p>
 
 **Own holidays** are yours. `MM-DD` (or `24.12.`) comes back every year; with `Every year` off the date
-counts once. They count everywhere, whatever the region.
+counts once. They count everywhere, whatever the region, and an empty greeting greets nobody here too.
 
 Placeholders: `{userName}`, `{holidayName}`, `{pronounType}` (he, she or they from Twitch pronouns).
 

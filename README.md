@@ -47,8 +47,8 @@ their birthday. In German, French, Spanish and a dozen more languages, following
 ## What it does
 
 - **Greets your chat on holidays.** The public holidays of your country, downloaded from
-  [date.nager.at](https://date.nager.at) — and only those of your region, if you pick one (Bavaria,
-  Vienna, Zürich …). New years download themselves.
+  [date.nager.at](https://date.nager.at) — and only those of your region, if you pick one (Texas,
+  Ontario, Bavaria, Queensland …). New years download themselves.
 - **Your own days.** Channel birthday, charity stream, anything: once on a date, or every year.
 - **Birthdays.** Viewers save their own with `!birthday 24.12.` (day and month only), moderators and you
   for others with `!birthday @name 24.12.`; you add more on the Birthdays page, with a year for `{age}`.
