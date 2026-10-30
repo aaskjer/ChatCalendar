@@ -67,7 +67,7 @@ YourBot: Saved, kjell_plays: your birthday is on July 22.
 - **Data & services:**
   - [Nager.Date](https://date.nager.at): public holidays
   - [pronouns.alejo.io](https://pronouns.alejo.io) by Alejo: viewer pronouns on Twitch
-- **Community:** [Chat Calendar on the Streamer.bot extensions forum](https://extensions.streamer.bot/t/twitch-calendar/2282)
+- **Community:** [Chat Calendar on the Streamer.bot discord](https://discord.com/channels/834650675224248362/1453874519713382431)
 - **Thanks:** YOU ♡
 
 None of the services above is affiliated with or endorses Chat Calendar.
