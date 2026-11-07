@@ -15,6 +15,8 @@
   <img src="https://img.shields.io/badge/tool-streamer.bot-0b73ff" alt="Streamer.bot">
   <img src="https://img.shields.io/github/license/aaskjer/ChatCalendar" alt="License">
   <img src="https://img.shields.io/github/v/release/aaskjer/ChatCalendar?include_prereleases" alt="Release">
+  <img src="https://img.shields.io/github/downloads/aaskjer/ChatCalendar/total" alt="Downloads">
+  <img src="https://img.shields.io/github/stars/aaskjer/ChatCalendar" alt="Stars">
 </p>
 
 <p align="center">
